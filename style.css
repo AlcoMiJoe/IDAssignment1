@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'California Grotesk';
+    src: url('fonts/CaliforniaGroteskRegular.woff2') format('woff2');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'California Grotesk';
+    src: url('fonts/CaliforniaGroteskMedium.woff2') format('woff2');
+    font-weight: 500; /* Medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'California Grotesk';
+    src: url('fonts/CaliforniaGroteskBold.woff2') format('woff2');
+    font-weight: 700; /* Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'California Grotesk';
+    src: url('fonts/CaliforniaGroteskBlack.woff2') format('woff2');
+    font-weight: 900; /* Black */
+    font-style: normal;
+}
+
+
+
+
+#navheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    background-color: #33103c;
+    padding: 0px 35px;
+}
+
+#navelem {
+    display: flex;
+    align-items: center;
+    padding: 0px 25px;
+    gap: 25px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #aaa;
+}
+
+.searchBar {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+}
+
+.searchBar-input {
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+    margin-left: 10px;
+    color: #656565;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 155px;
+}
+
+.logo-text a {
+    font-family: 'California Grotesk';
+    font-weight: 700;
+    font-size: 125px;
+    color: #fff;
+    text-decoration: none;
+}
