@@ -38,7 +38,7 @@ html body {
 
 nav {
     background-color: mediumpurple;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+    background-image: linear-gradient(to bottom right, #6a0dad, mediumpurple);
     position: relative;
     z-index: 888;
     display: flex;
@@ -151,7 +151,13 @@ nav li>a>svg {
 
 
 
+.up-shadow {
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 25%);
+}
 
+.down-shadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+}
 
 .paraBlock {
     display: flex;
@@ -159,8 +165,8 @@ nav li>a>svg {
     flex-direction: row-reverse;
     flex-wrap: wrap;
     padding: 50px 100px;
-    box-shadow: 0px -4px 4px rgba(0, 0, 0, 25%);
 }
+
 
 .para-img-left {
     flex-direction: row-reverse;
@@ -170,11 +176,22 @@ nav li>a>svg {
     flex-direction: row;
 }
 
-.paraBlock img {
+.para-small-img {
     max-width: 400px;
+}
+
+.para-medium-img {
+    max-width: 500px;
+}
+
+.para-large-img {
+    max-width: 700px;
+}
+
+
+.paraBlock img {
     height: auto;
     border-radius: 10%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
 }
 
 .paraText h2 {
@@ -206,8 +223,6 @@ nav li>a>svg {
     justify-content: center;
     align-items: center;
     background-color: mediumpurple;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
-    height: 93px;
     padding: 10px 0;
 }
 
@@ -232,14 +247,16 @@ nav li>a>svg {
     justify-content: center;
     background-color: mediumpurple;
     padding: 50px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
 }
 
 #footer ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 120px;
+    gap: 50px;
     margin: 0;
     padding: 0;
 }

@@ -38,7 +38,7 @@ html body {
 
 nav {
     background-color: mediumpurple;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+    background-image: linear-gradient(to bottom right, #6a0dad, mediumpurple);
     position: relative;
     z-index: 888;
     display: flex;
@@ -117,7 +117,6 @@ nav li:last-child {
     padding: 10px 15px;
     border-radius: 50px;
     background-color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
 }
 
 .searchBar-input {
@@ -148,20 +147,46 @@ nav li>a>svg {
 
 
 
+.up-shadow {
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 25%);
+}
+
+.down-shadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+}
 
 
+.merchLayout {
+    display: flex; /* Layout with two columns */
+    gap: 50px;
+    padding: 40px;
+}
 
+.m-column {
+    display: flex;
+    flex-direction: column; /* Stack items within each column */
+    gap: 20px; /* Space between image sets */
+    flex: 1; /* Equal width columns */
+}
+
+.m-column:first-child {
+    margin-bottom: 400px; /* Adjust for desired offset */
+}
+
+.m-column:last-child {
+    margin-top: 400px; /* Adjust for desired offset */
+}
 
 
 
 .paraBlock {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
     padding: 50px 100px;
-    box-shadow: 0px -4px 4px rgba(0, 0, 0, 25%);
 }
+
 
 .para-img-left {
     flex-direction: row-reverse;
@@ -171,24 +196,46 @@ nav li>a>svg {
     flex-direction: row;
 }
 
-.paraBlock img {
+.para-small-img {
     max-width: 400px;
+}
+
+.para-medium-img {
+    max-width: 500px;
+}
+
+.para-large-img {
+    max-width: 700px;
+}
+
+
+.paraBlock img {
+    width: 100%;
     height: auto;
     border-radius: 10%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
 }
 
 .paraText h2 {
     font-family: 'California Grotesk', sans-serif;
     font-weight: 900;
     font-size: 48px;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.paraText h2:hover {
+    background-color: #33103c;
+    color: white;
+    border-color: white;
+    border-style: outset;
+    border-radius: 50px;
 }
 
 .paraText p {
     font-family: 'California Grotesk', sans-serif;
     font-weight: 400;
     font-size: 24px;
-    max-width: 700px;
+    max-width: 550px;
     word-wrap: break-word;
     word-break: break-word;
 }
@@ -207,7 +254,6 @@ nav li>a>svg {
     justify-content: center;
     align-items: center;
     background-color: mediumpurple;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
     height: 93px;
     padding: 10px 0;
 }
@@ -233,17 +279,20 @@ nav li>a>svg {
     justify-content: center;
     background-color: mediumpurple;
     padding: 50px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
 }
 
 #footer ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 120px;
+    gap: 50px;
     margin: 0;
     padding: 0;
 }
+
 
 #footer a {
     font-family: 'California Grotesk', sans-serif;
@@ -269,6 +318,19 @@ nav li>a>svg {
         display: block;
     }
 }
+
+@media (max-width: 768px) {
+    .merchLayout {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .column:first-child,
+    .column:last-child {
+        margin: 0;
+    }
+
+}
+
 
 @media(max-width: 430px){
     .navSidebar{
