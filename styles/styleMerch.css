@@ -51,25 +51,25 @@
 
 
 
-.paraBlock img {
+.m-Block img {
     width: 100%;
     height: auto;
     border-radius: 10%;
 }
 
-.paraText a {
+.m-Text a {
     text-decoration: none;
     text-align: center;
 }
 
-.paraText h2 {
+.m-Text h2 {
     font-family: 'California Grotesk', sans-serif;
     font-weight: 900;
     font-size: 48px;
     transition: color 0.5s ease;
 }
 
-.paraText h2:hover {
+.m-Text h2:hover {
     background-color: #33103c;
     color: white;
     border-color: #33103c;
@@ -77,7 +77,7 @@
     border-radius: 50px;
 }
 
-.paraText p {
+.m-Text p {
     font-family: 'California Grotesk', sans-serif;
     font-weight: 400;
     font-size: 24px;

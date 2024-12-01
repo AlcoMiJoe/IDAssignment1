@@ -1,50 +1,29 @@
-Your Project's Name
-    One or two paragraphs providing an overview of your project. Tell us about your project.
-
-    Essentially, this part is your sales pitch.
+ID Assignment 1 - Spice Girls Website (Alecxander Dela Paz)
 
 Design Process
-    Provide us insights about your design process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
-    In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
+    For my website, I decided to create a website centering around the Spice Girls. For users who are interested in the Spice Girls, the globally famous 90s girl-group, I have made 3 pages about them, their music, and the members, with their different personas being the most unique part that differentiates them from other girl groups. 
 
-        As a user type, I want to perform an action, so that I can achieve a goal.
+    There are 3 Main Pages, the Home page, About page and Merchandise Page. There is no listings for show times as this page is more meant to cater to their fanbase who are nostalgic about one of their favourite girgl groups of all time. As such, there is a Merchandise page in place of a Event Timings page (or whatever you'd like to call it) showcasing different Spice-themed apparel.
 
-    This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory) Include the Adobe XD wireframe as a folder. You can include the XD share url.
+    Within the about page is sections dedicated to each Spice Girl, as the main appeal of the band is that anyone could see themselves in one or more of the members. Along with a general synopsis of the group, there are individual paragraph describing the character of each Spice Girl.
+
+    Figma Wireframe Link: https://www.figma.com/design/12XSn3ZVHsWlyzOkhCCF1F/Untitled?node-id=178-180&t=p0B0KhVZoTfvi0kl-1
+
 
 Features
-    In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
-    Existing Features
-        Feature 1 - allows users X to achieve Y, by having them fill out Z
-        ...
+    Feature 1 - Responsive Sidebar, allowing those on different devices to access the different pages, all while catering to the different screen sizes of the user's device Condenses into a hamburger menu for smaller devices.
 
-    In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-
-    Features Left to Implement
-        Another feature idea
+    Feature 2 - Contact Us popup allowing users to input their name, email and a message they want to send to the Spice Girls.
+    
+    Feature 3 - Image carousell in index.html allowing users to see the different albums the Spice Girls have released.
+        
 
 Technologies Used
     HTML
     CSS
     JavaScript
-
-    JQuery
-        The project uses JQuery to simplify DOM manipulation.
-
-Testing
-    For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-        Contact form:
-            Go to the "Contact Us" page
-            Try to submit the empty form and verify that an error message about the required fields appears
-            Try to submit the form with an invalid email address and verify that a relevant error message appears
-            Try to submit the form with all inputs valid and verify that a success message appears.
-            In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-    You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-    If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 Credits
     Content

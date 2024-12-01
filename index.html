@@ -82,7 +82,7 @@
     <div>
         <img src="images/spice-girls-jump-shot-g2k9j8ugsxypjhjv.jpg" alt="Spice Girls Home Header">
     
-        <div class="overlay">
+        <div class="imgOverlay">
             <div class="logoText">
                 <img src="images/overlay-text.png" alt="Welcome to Spice World!">
             </div>
@@ -150,15 +150,22 @@
                     </li>
                 </ul>
             </div>
-        </div>
 
-        <div class="slider-nav">
-            <a href="#slide-1"></a>
-            <a href="#slide-2"></a>
-            <a href="#slide-3"></a>
-            <a href="#slide-4"></a>
-        </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a> 
 
+        </div>
+          
+
+    </div>
+
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
     </div>
    </section>
 
@@ -175,31 +182,44 @@
     <div>
         <ul>
             <li><a href="#navheader">@ SPICE GIRLS 2024</a></li>
-            <li><a href="#navheader">CONTACT US</a></li>
+            <li onclick="toggleContact()"><a href="#navheader">CONTACT US</a></li>
             <li><a href="#navheader">PRIVACY POLICY</a></li>
             <li><a href="#navheader">TERMS AND CONDITIONS</a></li>
         </ul>
     </div>
    </section>
 
-   <section id="contact-popup" class="down-shadow">
-    <div class="popup-content">
-        <h2>SEND US A MESSAGE</h2>
-        <p>If you would like to get in contact with us for any bookings or collaborations, send us a message here!</p>
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Enter your name">
-            </div>
-            <div class="input-box">
-                <input type="email" placeholder="Enter your name">
-            </div>
-            <div class="input-message-box">
-                <textarea></textarea>
-            </div>
-            <div class="input-box">
-                <input type="button" value="Submit">
-            </div>
-        </form>
+   <section id="contact-popup">
+    <div class="popup-overlay" onclick="toggleContact()"></div>
+
+    <div class="popup-window down-shadow">
+        <div class="popup-content">
+
+            <a onclick="toggleContact()" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#6a0dad">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+            </a>
+            
+            <h2>SEND US A MESSAGE</h2>
+            <p>If you would like to get in contact with us for any bookings or collaborations, send us a message here!</p>
+            
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <div class="input-box message-box">
+                    <textarea placeholder="Enter your message"></textarea>
+                </div>
+                <div class="button">
+                    <input type="button" value="Submit">
+                </div>
+                <div class="error-message-container"></div>                
+            </form>
+        </div>
     </div>
    </section>
 

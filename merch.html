@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search">
 
     <link rel="stylesheet" href="styles/styleGeneral.css">
     <link rel="stylesheet" href="styles/styleMerch.css">
@@ -19,7 +19,7 @@
 
     
 <body>
-   <nav id="navHeader down-shadow">
+   <nav id="navHeader" class="down-shadow">
 
     <ul class="navSidebar">
         <li onclick=hideNavSidebar()>
@@ -86,11 +86,11 @@
 
    <section class="merchLayout">
     <div class="m-column">
-        <div class="paraBlock">
+        <div class="m-Block">
             
-            <img class="para-medium-img down-shadow" src="images/merch-1.png" alt="SpiceWorld Shirt">
+            <img class="down-shadow" src="images/merch-1.png" alt="SpiceWorld Shirt">
             
-            <div class="paraText">
+            <div class="m-Text">
                 <a href="#"><h2>SPICEWORLD MOVIE SHIRT</h2></a>
                 <p>Celebrate Spiceworld: The Movie with this vibrant t-shirt! Soft, stylish, and perfect for every fan.
 
@@ -98,11 +98,11 @@
             </div>
 
         </div>
-        <div class="paraBlock">
+        <div class="m-Block">
             
-            <img class="para-small-img down-shadow" src="images/merch-2.png" alt="Spice Shoes">
+            <img class="down-shadow" src="images/merch-2.png" alt="Spice Shoes">
             
-            <div class="paraText">
+            <div class="m-Text">
                 <a href="#"><h2>EXCLUSIVE SHOES</h2></a>
                 <p>Rock bold, Spice Girls-designed shoes! Unique patterns and colors to spice up every step.
 
@@ -112,11 +112,11 @@
         </div>
     </div>
     <div class="m-column">
-        <div class="paraBlock">
+        <div class="m-Block">
             
-            <img class="para-small-img down-shadow" src="images/merch-3.png" alt="Spice Mug">
+            <img class="down-shadow" src="images/merch-3.png" alt="Spice Mug">
             
-            <div class="paraText">
+            <div class="m-Text">
                 <a href="#"><h2>ALBUM MUG</h2></a>
                 <p>Sip your favorite drink with this mug featuring our debut album art. A daily reminder to embrace your inner Wannabe!
 
@@ -124,11 +124,11 @@
             </div>
 
         </div>
-        <div class="paraBlock">
+        <div class="m-Block">
             
-            <img class="para-medium-img down-shadow" src="images/merch-4.png" alt="Spice Cards">
+            <img class="down-shadow" src="images/merch-4.png" alt="Spice Cards">
             
-            <div class="paraText">
+            <div class="m-Text">
                 <a href="#"><h2>POSTCARDS SET</h2></a>
                 <p>Collect or share these limited-edition postcards with iconic Spice Girls images. Perfect for any fan!
 
@@ -141,13 +141,49 @@
 
 
 
-   <section id="footer">
-    <ul>
-        <li><a href="#navheader">@ SPICE GIRLS 2024</a></li>
-        <li><a href="#navheader">CONTACT US</a></li>
-        <li><a href="#navheader">PRIVACY POLICY</a></li>
-        <li><a href="#navheader">TERMS AND CONDITIONS</a></li>
-    </ul>
+<section id="footer">
+    <div>
+        <ul>
+            <li><a href="#navheader">@ SPICE GIRLS 2024</a></li>
+            <li onclick="toggleContact()"><a href="#navheader">CONTACT US</a></li>
+            <li><a href="#navheader">PRIVACY POLICY</a></li>
+            <li><a href="#navheader">TERMS AND CONDITIONS</a></li>
+        </ul>
+    </div>
+   </section>
+
+   <section id="contact-popup">
+    <div class="popup-overlay" onclick="toggleContact()"></div>
+
+    <div class="popup-window down-shadow">
+        <div class="popup-content">
+
+            <a onclick="toggleContact()" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#6a0dad">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+            </a>
+            
+            <h2>SEND US A MESSAGE</h2>
+            <p>If you would like to get in contact with us for any bookings or collaborations, send us a message here!</p>
+            
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <div class="input-box message-box">
+                    <textarea placeholder="Enter your message"></textarea>
+                </div>
+                <div class="button">
+                    <input type="button" value="Submit">
+                </div>
+                <div class="error-message-container"></div>                
+            </form>
+        </div>
+    </div>
    </section>
 
    <script src="scripts/merchScript.js"></script>
