@@ -1,0 +1,954 @@
+
+/* Note from Alecxander: 
+    Apologies but I still think having everything in ONE CSS file is a bit ridiculous.
+    Just my opinion though. :D 
+*/
+
+/* -------------------------------
+   Fonts
+-------------------------------- */
+
+@font-face {
+    font-family: 'California Grotesk';
+    src: url('fonts/CaliforniaGroteskRegular.woff2') format('woff2');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'California Grotesk';
+    src: url('fonts/CaliforniaGroteskMedium.woff2') format('woff2');
+    font-weight: 500; /* Medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'California Grotesk';
+    src: url('fonts/CaliforniaGroteskBold.woff2') format('woff2');
+    font-weight: 700; /* Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'California Grotesk';
+    src: url('fonts/CaliforniaGroteskBlack.woff2') format('woff2');
+    font-weight: 900; /* Black */
+    font-style: normal;
+}
+
+
+
+/* -------------------------------
+   General Styles
+-------------------------------- */
+
+
+/* To Hide Scrollbar */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html body {
+    overflow-x: hidden;
+}
+
+
+
+/* Navigation Menu Styles */
+
+nav {
+    background-color: mediumpurple;
+    background-image: linear-gradient(to bottom right, #6a0dad, mediumpurple);
+    position: relative;
+    z-index: 888;
+    display: flex;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+nav img {
+    max-width: 200px;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+nav li > a:not(:has(*)) {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    height: 100%;
+    padding: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.5s ease;
+}
+
+nav li>a:not(:has(*)):hover {
+    color: #33103c;
+    background-color: white;
+    border-color: white;
+    border-style: outset;
+    border-radius: 50px;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+nav li:last-child {
+    margin-left: 10px;
+}
+
+/* Navigation Siderbar Styles (for smaller screens) */
+
+.navSidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 999;
+    background: rgb(147, 112, 216, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: -8px 0px 8px rgba(0, 0, 0, 25%);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.navSidebar li {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.navSidebar a {
+    width: 100%;
+}
+
+/* Sidebar Menu Button Toggle  */
+
+.menu-button {
+    display: none;
+}
+
+/* Search Bar Styling */
+
+.searchBar {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+}
+
+.searchBar-input {
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+    margin-left: 10px;
+    color: #656565;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: inherit;
+}
+
+nav li>a>svg {
+    padding: 10px;
+}
+
+
+
+
+
+
+
+/* Miscellaneous Page Styling */
+
+.page-top-margin {
+    margin-top: 42px;
+}
+
+
+.up-shadow {
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 25%);
+}
+
+.down-shadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+}
+
+
+
+
+
+/* General Paragraph Block Styling */
+
+
+.paraBlock {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    padding: 3.5vw 6.95vw;
+}
+
+    /* Paragraph Block Image Sizing and Order */
+
+
+.para-img-left {
+    flex-direction: row-reverse;
+}
+
+.para-img-right {
+    flex-direction: row;
+}
+
+.para-small-img {
+    width: clamp(200px, 60vw, 400px);
+}
+
+.para-medium-img {
+    width: clamp(300px, 70vw, 500px);
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+
+    /* Block Text Styling */
+
+.paraBlock img {
+    height: auto;
+    border-radius: 10%;
+}
+
+.paraText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.paraText h2 {
+    font-family: 'California Grotesk', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.paraText p {
+    font-family: 'California Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    max-width: 700px;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+
+
+
+
+
+
+
+/* Section Divider Styling */
+
+.barHeader {
+    width: 100%;
+    height: 93px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: mediumpurple;
+}
+
+.barHeader h1 {
+    font-family: 'California Grotesk', sans-serif;
+    font-weight: 900;
+    font-size: clamp(48px, 4.4vw, 64px);
+    color: #fff;
+    letter-spacing: 0.01em;
+    line-height: 1;
+}
+
+
+
+
+/* Footer Styling */
+
+#footer {
+    display: flex;
+    justify-content: center;
+    background-color: mediumpurple;
+    padding: 50px;
+}
+
+#footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+#footer a {
+    font-family: 'California Grotesk', sans-serif;
+    font-weight: 500;   
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+#footer a:hover {
+    color: rgba(255, 255, 255, 75%);
+}
+
+
+
+/* Contact Us Pop-Up Form Styling */
+
+.popup-window {
+    
+    font-family: 'California Grotesk', sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.popup-content {
+    width: 80%;
+    background: white;
+    border-radius: 4.25rem;
+    border: #33103c;
+    border-style: outset;
+    border-radius: 40px;
+    padding: 20px 60px 40px 40px;
+
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    z-index: 1001;
+}
+
+
+
+
+.popup-content h2 {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(48px, 4.4vw, 64px);
+    color: #6a0dad;
+}
+
+.popup-content p {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(24px, 2vw, 28px);
+    max-width: 700px;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.popup-content .input-box {
+    height: 50px;
+    width: 100%;
+    margin: 12px 0;
+}
+
+.popup-content .input-box input,
+.popup-content .input-box textarea {
+    font-family: 'Cairo', sans-serif;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    background-color: #f0f1f8;
+    padding: 0 15px;
+    resize: none;
+}
+
+.popup-content .message-box {
+    min-height: 110px;
+}
+
+.popup-content .input-box textarea {
+    padding: 15px;
+}
+
+
+.popup-content .button input[type="button"] {
+    color: #fff;
+    background-color: #6a0dad;
+    border: outset;
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-size: clamp(14px, 1.25vw, 18px);
+    margin-top: 20px;
+}
+
+/* Pop-Up Translucent Overlay on Background */
+
+.popup-overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 50%);
+    z-index: 1000;
+    display: none;
+}
+
+
+/* Toggle for Displaying Popup (see individual .js files)*/
+
+#contact-popup.active .popup-overlay {
+    display: block;
+}
+
+#contact-popup.active .popup-content {
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* Pop-Up Error Message for Invalid Input Styling*/
+
+.error-message {
+    font-family: 'California Grotesk', sans-serif;
+    font-weight: 400;
+}
+
+.error-message-container {
+    color: red;
+    font-size: 20px;
+    margin-top: 8px;
+    text-align: left;
+}
+
+
+
+
+/* -------------------------------
+   Index Page Styles
+-------------------------------- */
+ /* from styleIndex.css */
+
+
+ /* Big Header Image with Welcome Message Styling */
+
+ .imgSect {
+    padding: 5% 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.imgSect img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    margin: 50px auto;
+}
+
+
+.imgOverlay {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 100px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.logoText {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    width: 30%;
+}
+
+
+
+
+
+/* Music Album Card Carousel Styling */
+
+.albumCard {
+    width: 40rem;
+    border-radius: 50px;
+    border-color: black;
+    border-width: 4px;
+    scroll-snap-align: start;
+    object-fit: cover;
+    padding: 0 5.25rem;
+}
+
+.albumCard ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.albumCard li {
+    list-style: none;
+    text-decoration: none;
+    font-family: 'California Grotesk', sans-serif;
+    font-weight: 700;
+
+}
+
+.albumCard img {
+    width: clamp(300px, 41.67vw, 600px);
+    height: auto;
+    display: block;
+}
+
+.albumCard li:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.albumCard h2 {
+    font-size: 600%;
+    margin: 0;
+    text-align: center;
+}
+
+.albumCard p {
+    margin: 1rem 0 0 0;
+}
+
+
+
+
+.albumSlides {
+    padding: 5.5vw;
+}
+.slider-wrapper {
+    position: relative;
+    width: clamp(24rem, 53.3vw, 48rem);
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+
+
+
+  /* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #33103c;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+
+/* The card number indicator */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+
+
+
+
+/* Listen Now Button Styling */
+
+.listen-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listen-button a {
+    margin: 3.3vw;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'California Grotesk', sans-serif;
+    font-size: clamp(40px, 3.3vw, 48px);
+    font-weight: 900;
+    width: fit-content;
+    padding: 2rem;
+    border-radius: 4.25rem;
+    border: #33103c;
+    border-style: outset;
+    transition: color 0.5s ease;
+}
+
+.listen-button a:hover {
+    background-color: #33103c;
+    color: white;
+}
+
+
+/* -------------------------------
+   About Page Styles
+-------------------------------- */
+ /* from styleAbout.css */
+
+
+/* "Which Spice Girl Are You" Legend/Directory Section Styling  */
+ 
+.which ul {
+    list-style: none;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+/* Styling of each card */
+
+.girl-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.girl-card .image-container {
+    width: 15.625vw;
+    height: 52vw;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.girl-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+
+}
+
+.girl-card h2 {
+    font-family: 'California Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(48px, 4.4vw, 64px);
+    margin: 2rem 0 0 0;
+    line-height: 1;
+    text-align: center;
+}
+
+.girl-card a {
+    text-decoration: none;
+    font-family: 'California Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    max-width: 700px;
+    color: black;
+    text-align: center;
+}
+
+.girl-card p {
+    margin: 0;
+}
+
+/* Style for the text section of the card */
+
+.girl-card div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+/* Default Font Colour For Individual Sections */
+
+#ginger, #baby,
+#sporty, #scary,
+#posh {
+    color: white;
+}
+
+/* Styling for name (_____ Spice) header of each individual section*/
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.name h1 {
+    font-family: 'California Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(125px ,14vw, 200px);
+    margin: 0;
+    line-height: 1;
+}
+
+.name h3 {
+    font-family: 'California Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(21.875px ,2.7vw, 35px);
+    margin: 0;
+    margin-bottom: 3.3vw;
+}
+
+
+/*
+ Dark Translucent Overlay for each section
+ Separated because of different background-image inputs
+*/
+
+#ginger {
+    background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url(../images/background-ginger.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#baby {
+    background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url(../images/background-baby.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#sporty {
+    background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url(../images/background-sporty.png);
+    background-size: cover;
+    background-position: left;
+}
+
+#scary {
+    background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url(../images/background-scary.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#posh {
+    background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url(../images/background-posh.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* -------------------------------
+   Merch Page Styles
+-------------------------------- */
+ /* from styleMerch.css */
+
+
+ /* Displaying each Merch Block as columns */
+
+ .merchLayout {
+    display: flex;
+    gap: 50px;
+    padding: 40px;
+}
+
+.m-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Adding margins to created zig-zag/staggered effect */
+
+.m-column:first-child {
+    margin-bottom: 400px;
+}
+
+.m-column:last-child {
+    margin-top: 400px;
+}
+
+
+/* Merch Block Styling */
+
+.m-Block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+.m-Text a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.m-Text h2 {
+    font-family: 'California Grotesk', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    transition: color 0.5s ease;
+}
+
+.m-Text h2:hover {
+    background-color: #33103c;
+    color: white;
+    border-color: #33103c;
+    border-style: outset;
+    border-radius: 50px;
+}
+
+.m-Text p {
+    font-family: 'California Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    max-width: inherit;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+
+
+/* -------------------------------
+   Media Queries
+-------------------------------- */
+
+/* Show different Navigation Menu Layouts based on screen width*/
+
+@media(max-width: 1240px){
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+/* Limit size of Logo Text in index.html when page is small enough */
+
+@media(max-width: 1000px){
+    .logoText {
+        width: 240px;
+    }
+}
+
+/* Switch Legend Layout in about.html from horizontal to vertical, adjust box sizing as necessary */
+
+@media(max-width: 750px) {
+    .girl-card .image-container {
+        height: 117.1875px;
+        width: 52vw;
+    }
+    .which ul {
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 2rem
+    
+    }
+
+    .girl-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .girl-card h2, .girl-card a {
+        text-align: right;
+    }
+
+    .girl-card h2 {
+        margin: 0;
+    }
+}
+
+/* Change Merch Block layout to singular column for smaller screens*/
+
+@media (max-width: 768px) {
+    .merchLayout {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    /* Remove margins from staggering effect */
+
+    .m-column:first-child,
+    .m-column:last-child {
+        margin: 0;
+    }
+
+}
+
+/* Change maximum font size for divider */
+
+@media (max-width: 660px){
+    .barHeader h1{
+        font-size: clamp(32px, 7.27vw, 48px);
+    }
+}
+
+
+/* Make sidebar cover whole screen for smaller screens*/
+
+@media(max-width: 460px){
+    .navSidebar{
+        width: 100%;
+    }
+}

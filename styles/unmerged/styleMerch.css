@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'California Grotesk';
-    src: url('fonts/CaliforniaGroteskRegular.woff2') format('woff2');
+    src: url('../fonts/CaliforniaGroteskRegular.woff2') format('woff2');
     font-weight: 400; /* Regular */
     font-style: normal;
 }
 
 @font-face {
     font-family: 'California Grotesk';
-    src: url('fonts/CaliforniaGroteskMedium.woff2') format('woff2');
+    src: url('../fonts/CaliforniaGroteskMedium.woff2') format('woff2');
     font-weight: 500; /* Medium */
     font-style: normal;
 }
 
 @font-face {
     font-family: 'California Grotesk';
-    src: url('fonts/CaliforniaGroteskBold.woff2') format('woff2');
+    src: url('../fonts/CaliforniaGroteskBold.woff2') format('woff2');
     font-weight: 700; /* Bold */
     font-style: normal;
 }
 
 @font-face {
     font-family: 'California Grotesk';
-    src: url('fonts/CaliforniaGroteskBlack.woff2') format('woff2');
+    src: url('../fonts/CaliforniaGroteskBlack.woff2') format('woff2');
     font-weight: 900; /* Black */
     font-style: normal;
 }

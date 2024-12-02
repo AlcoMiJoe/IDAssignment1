@@ -12,15 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search">
 
-    <link rel="stylesheet" href="styles/styleGeneral.css">
-    <link rel="stylesheet" href="styles/styleMerch.css">
+    <link rel="stylesheet" href="styles/styleMerged.css">
 
 </head>
 
     
 <body>
-   <nav id="navHeader" class="down-shadow">
+   
+   <!--Navigation Menu Header-->
+    <nav id="navHeader" class="down-shadow">
 
+    <!--Navigation Sidebar for Smaller Screens-->
     <ul class="navSidebar">
         <li onclick=hideNavSidebar()>
             <a href="#">
@@ -46,7 +48,8 @@
             </form>
         </li>
     </ul>
-             
+
+    <!--Main Navigation Menu Header-->
     <ul>
         <li><a href="index.html"><img src="images/logo.png" alt="Spice Girls Logo"></a></li>
         
@@ -77,13 +80,14 @@
 
    </nav>
 
-
+   <!--Heading Divider [WSGAreYou]-->
    <section>
     <div class="barHeader down-shadow page-top-margin">
         <h1>MERCHANDISE</h1>
     </div>
    </section>
 
+   <!--Merchandise Block Layout-->
    <section class="merchLayout">
     <div class="m-column">
         <div class="m-Block">
@@ -137,11 +141,11 @@
 
         </div>
     </div>
-</section>
+   </section>
 
 
-
-<section id="footer">
+   <!--Footer-->
+   <section id="footer">
     <div>
         <ul>
             <li><a href="#navheader">@ SPICE GIRLS 2024</a></li>
@@ -152,6 +156,7 @@
     </div>
    </section>
 
+   <!--Contact Us Form Popup-->
    <section id="contact-popup">
     <div class="popup-overlay" onclick="toggleContact()"></div>
 
